@@ -52,7 +52,7 @@ public class Fraction implements Comparable<Fraction>
 			return 0;
 		
 		
-		return _num - o.getNum();//Double.compare(realValue(), o.realValue());
+		return _num - o.getNum();
 	}
 	
 	public double realValue() throws ArithmeticException
