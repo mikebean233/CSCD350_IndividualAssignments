@@ -1,3 +1,12 @@
+/**
+ * Michael Peterson
+ * CSCD 350 Assignment 3
+ * 
+ * This file contains the Fraction class, which represents a simplified fraction of integers
+ *
+ **/
+
+
 package fraction;
 
 import java.util.ArrayList;
@@ -14,7 +23,7 @@ public class Fraction implements Comparable<Fraction>
 	public Fraction(int num, int den)
 	{
 		if(den == 0)
-			throw new IllegalArgumentException("Attempt to devide by zero");
+			throw new IllegalArgumentException("The denominator with the value of 0 is not permitted");
 		
 		if(num == 0)
 		{
@@ -52,7 +61,7 @@ public class Fraction implements Comparable<Fraction>
 			return 0;
 		
 		
-		return _num - o.getNum();
+		return _num - o.getNum();//Double.compare(realValue(), o.realValue());
 	}
 	
 	public double realValue() throws ArithmeticException
@@ -63,7 +72,7 @@ public class Fraction implements Comparable<Fraction>
 	public Fraction add(Fraction otherFraction) throws NullPointerException
 	{
 		if(otherFraction == null)
-			throw new NullPointerException("Fraction.add received a null Fraction reference");
+			throw new NullPointerException("Cannot perform math operations on a null fraction object!");
 		
 		int newDen = _den * otherFraction.getDen();
 		return new Fraction(_num * otherFraction.getDen() + (otherFraction.getNum() * _den), newDen);
@@ -72,7 +81,7 @@ public class Fraction implements Comparable<Fraction>
 	public Fraction sub(Fraction otherFraction)
 	{
 	    if(otherFraction == null)
-		    throw new NullPointerException("Fraction.sub received a null Fraction reference");
+		    throw new NullPointerException("Cannot perform math operations on a null fraction object!");
 	    
 	    int newDen = _den * otherFraction.getDen();
 	    return new Fraction(_num * otherFraction.getDen() - (otherFraction.getNum() * _den), newDen);
@@ -81,7 +90,7 @@ public class Fraction implements Comparable<Fraction>
 	public Fraction multiply(Fraction otherFraction)
 	{
 	    if(otherFraction == null)
-		    throw new NullPointerException("Fraction.multiply received a null Fraction reference");
+		    throw new NullPointerException("Cannot perform math operations on a null fraction object!");
 	    
 	    return new Fraction(_num * otherFraction.getNum(), _den * otherFraction.getDen());
 	}

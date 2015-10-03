@@ -1,3 +1,11 @@
+/**
+ * Michael Peterson
+ * CSCD 350 Assignment 3
+ * 
+ * This file contains the unit tests for testing to see if the Fraction class is throwing exceptions appropriately
+ *
+ **/
+
 package fraction;
 
 import static org.junit.Assert.*;

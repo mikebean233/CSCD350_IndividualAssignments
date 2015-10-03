@@ -1,3 +1,12 @@
+/**
+ * Michael Peterson
+ * CSCD 350 Assignment 3
+ * 
+ * This file contains all of the unit tests which will test the Fraction class
+ *
+ **/
+
+
 package fraction;
 
 import static org.junit.Assert.*;
